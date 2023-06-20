@@ -1,0 +1,26 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Detalhes sobre {{ myvendor.cnpj }} {{ myvendor.razaosocial }}
+{% endblock %}
+
+{% block content %}
+
+<div class="card mt-2">
+
+    <div class="card-header">
+        Detalhes sobre {{ myvendor.cnpj }} {{ myvendor.razaosocial }}
+    </div>
+
+    <div class="card-body">
+        <h1>{{ myvendor.cnpj }} {{ myvendor.razaosocial }}</h1>
+
+        <p>Inscrição estadual: {{ myvendor.inscEstadual }}</p>
+        <p>Cidade: {{ myvendor.cidade }}</p>
+        <p>Telefone: {{ myvendor.telefone }}</p>
+
+        <p><a href="/vendors/">Voltar</a></p>
+    </div>
+</div>
+
+{% endblock %}

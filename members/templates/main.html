@@ -1,0 +1,21 @@
+{% extends "master.html" %}
+
+{% block title %}
+My Tennis Club
+{% endblock %}
+
+{% block content %}
+<h2>Seja bem-vindo!</h2>
+<p>
+    Este projeto tem por objetivo o gerenciamento de membros de um clube de tênis e fornecedores.
+    Utiliza o framework Django com a linguagem Python.
+</p>
+{% load static %}
+<div class="text-center">
+    <a class="nav-link active" href="/">
+        <picture>
+            <img src="{% static 'img/welcome.png' %}" width="500" class="img-fluid img-thumbnail" alt="...">
+        </picture>
+    </a>
+</div>
+{% endblock %}

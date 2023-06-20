@@ -1,0 +1,49 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Atualizando fornecedor
+{% endblock %}
+
+{% block content %}
+
+<div class="card mt-2">
+
+    <div class="card-reader">
+        Atualizando fornecedor
+    </div>
+    <div class="card-body">
+        <form action="updaterecord/{{ myvendor.id}}" method="post">
+            {% csrf_token %}
+
+            CNPJ:<br>
+            <input type="text" name="cnpj" value="{{ myvendor.cnpj }}">
+            <br><br>
+
+            Razão social:<br>
+            <input type="text" name="razaosocial" value="{{ myvendor.razaosocial }}">
+            <br><br>
+
+            Inscrição Estadual:<br>
+            <input type="text" name="inscEstadual" value="{{ myvendor.inscEstadual }}">
+            <br><br>
+
+            Cidade:<br>
+            <input type="text" name="cidade" value="{{ myvendor.cidade }}">
+            <br><br>
+
+            Telefone:<br>
+            <input type="text" name="telefone" value="{{ myvendor.telefone }}">
+            <br><br>
+
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </form>
+        
+        <p><a href="/vendors">Voltar</a></p>
+    </div>
+</div>
+
+{% endblock %}
+            
+
+

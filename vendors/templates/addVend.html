@@ -1,0 +1,53 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Novo fornecedor
+{% endblock %}
+
+{% block content %}
+
+<div class="card mt-2">
+
+    <div class="card-reader">
+        Novo fornecedor
+    </div>
+    <div class="card-body">
+        <form action="addrecord/" method="post">
+            {% csrf_token %}
+
+            CNPJ:<br>
+            <input type="text" name="cnpj">
+            <br><br>
+            
+            Razão social:<br>
+            <input type="text" name="razaosocial">
+            <br><br>
+            
+            Inscrição estadual:<br>
+            <input type="text" name="inscEstadual">
+            <br><br>
+
+            Endereço:<br>
+            <input type="text" name="endereco">
+            <br><br>
+
+            Cidade:<br>
+            <input type="text" name="cidade">
+            <br><br>
+
+            Telefone:<br>
+            <input type="text" name="telefone">
+            <br><br>
+
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </form>
+        
+        <p><a href="/vendors">Voltar</a></p>
+    </div>
+</div>
+
+{% endblock %}
+            
+
+

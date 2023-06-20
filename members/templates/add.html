@@ -1,0 +1,45 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Novo membro
+{% endblock %}
+
+{% block content %}
+
+<div class="card mt-2">
+
+    <div class="card-reader">
+        Novo membro
+    </div>
+    <div class="card-body">
+        <form action="addrecord/" method="post">
+            {% csrf_token %}
+
+            Primeiro nome:<br>
+            <input type="text" name="nome">
+            <br><br>
+
+            Sobrenome:<br>
+            <input type="text" name="sobrenome">
+            <br><br>
+
+            Telefone:<br>
+            <input type="text" name="telefone">
+            <br><br>
+
+            Data de cadastro:<br>
+            <input type="text" name="data_cadastro">
+            <br><br>
+
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </form>
+        
+        <p><a href="/members">Voltar</a></p>
+    </div>
+</div>
+
+{% endblock %}
+            
+
+
